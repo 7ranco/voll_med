@@ -1,0 +1,14 @@
+spring:
+  profile.active: dev
+  datasource:
+    url: jdbc:mysql://localhost/vollmed_api_test?createDatabaseIfNotExist=true&ServerTimeZone=UTC
+    username: root
+    password:
+
+
+#spring.datasource.url=jdbc:h2:mem.testdb
+#spring.datasource.driverClassName= orgh2.Driver
+#spring.datasource.username=sa
+#spring.datasource.password=passwor
+#spring.jpa.database-plataform=org.hibernate.dialect.H2Dialect
+

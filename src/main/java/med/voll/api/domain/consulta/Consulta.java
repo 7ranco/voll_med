@@ -13,8 +13,6 @@ import java.time.LocalDateTime;
 @Table(name = "consultas")
 @Entity(name = "Consulta")
 @Getter
-@NoArgsConstructor
-@AllArgsConstructor
 @EqualsAndHashCode(of = "id")
 public class Consulta {
 
@@ -35,6 +33,14 @@ public class Consulta {
     @Enumerated(EnumType.STRING)
     @Column(name = "motivo_cancelamiento")
     private MotivoCancelacion motivoCancelamiento;
+
+    public Consulta(Long id, Medico medico, Paciente paciente, LocalDateTime fecha, MotivoCancelacion motivoCancelamiento) {
+        this.id = id;
+        this.medico = medico;
+        this.paciente = paciente;
+        this.fecha = fecha;
+        this.motivoCancelamiento = motivoCancelamiento;
+    }
 
     public Consulta(Object o, Medico medico, Paciente paciente, LocalDateTime fecha) {
     }
